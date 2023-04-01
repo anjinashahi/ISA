@@ -50,7 +50,6 @@ const show1 = document.getElementsByClassName("input")[0]
 const command = document.querySelectorAll(".op")
 command.forEach(element=> {
     element.addEventListener('click', ()=>{
-        operation()
         sign = element.value
         show1.innerHTML = sign
         cal2 = cal
@@ -79,3 +78,11 @@ function operation(){
     show1.innerHTML = ans
     cal = ans
 }
+const clear = document.getElementsByClassName("clear")[0]
+clear.addEventListener('click', ()=>{
+    cal = ''
+    cal2 = ''
+    sign = ''
+    show.innerHTML = ''
+
+})
